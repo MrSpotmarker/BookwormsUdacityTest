@@ -98,9 +98,6 @@ public class BookwormActivity extends AppCompatActivity implements LoaderManager
         mEmptyStateTextView.setText(R.string.no_books);
         mProgressBar.setVisibility(GONE);
 
-        // Clear the adapter of previous earthquake data
-        mAdapter.clear();
-
         // If there is a valid list of {@link Book}s, then add them to the adapter's
         // data set. This will trigger the ListView to update.
         if (books != null && !books.isEmpty()) {
