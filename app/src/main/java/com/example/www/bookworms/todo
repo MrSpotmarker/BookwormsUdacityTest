@@ -1,0 +1,14 @@
+TODO
+
+x JSON Zeug parsen
+x BookAdapter schreiben (2 Constructor, einmal mit und einmal ohne Bild
+x ListItem hübsch machen OHNE Image
+x HandlerManager einrichten
+x HTTP Connection erstellen und JSON aus Web fetchen
+x Checks für Intenet, Leere Daten einbauen
+x Progress Bar einbauen beim Laden
+- Search Query ändern mit User Input
+- Zum Spaß - Bild anzeigen einbauen
+
+Debug:
+JSON parst bei fehlender Description hard-coded text, nicht String-Resource...

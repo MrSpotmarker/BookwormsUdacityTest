@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@color/colorAccent">
+
+    <ImageView
+        android:id="@+id/book_thumbnail"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginRight="16dp"
+        android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/book_thumbnail"
+            android:text="Title"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textAllCaps="true"/>
+        <TextView
+            android:paddingTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/book_author"
+            android:layout_below="@id/book_title"
+            android:layout_toRightOf="@id/book_thumbnail"
+            android:text="(Muster Max, Muster Moritz)"/>
+    <TextView
+        android:id="@+id/book_description_header"
+        android:paddingTop="4dp"
+        android:paddingLeft="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:layout_below="@id/book_thumbnail"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/book_description_body"
+        android:paddingTop="4dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ichb bib eine reic htif lange Beschei bung...Ichb bib eine reichtif lange Bescheibu ng...Ichb bib eine reich tif lange Besche ibung...Ichb  b ib eine reichtif lange Besc heibun g...Ichb bib eine reichtif lange Bescheibung...Ichb bib eine reichtif lange Bescheibung..."
+        android:layout_below="@id/book_description_header" />
+</RelativeLayout>
