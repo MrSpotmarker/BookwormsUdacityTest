@@ -1,14 +1,16 @@
 TODO
 
-x JSON Zeug parsen
+x JSON Zeug parsen // Achtung - hat bereits bei description und author gefuchst zwischendurch...
 x BookAdapter schreiben (2 Constructor, einmal mit und einmal ohne Bild
 x ListItem hübsch machen OHNE Image
 x HandlerManager einrichten
 x HTTP Connection erstellen und JSON aus Web fetchen
-x Checks für Intenet, Leere Daten einbauen
+x Checks für Internet, Leere Daten einbauen
 x Progress Bar einbauen beim Laden
-- Search Query ändern mit User Input
+x Search Query ändern mit User Input
+- onItemClick für Link
 - Zum Spaß - Bild anzeigen einbauen
 
 Debug:
+"no books" scheint auf bei progressBar
 JSON parst bei fehlender Description hard-coded text, nicht String-Resource...

@@ -60,7 +60,6 @@ public class BookwormActivity extends AppCompatActivity implements LoaderManager
         // Find a reference to the {@link button} in the layout
         Button button = (Button) findViewById(R.id.search_button);
         button.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 queryUrl = "https://www.googleapis.com/books/v1/volumes?q=";
@@ -69,7 +68,8 @@ public class BookwormActivity extends AppCompatActivity implements LoaderManager
                 mProgressBar.setVisibility(View.VISIBLE);
 
                 if (isConnected) {
-                    loaderManager.initLoader(BOOK_LOADER_ID, null, BookwormActivity.this);
+                    //restart loader
+                    loaderManager.restartLoader(BOOK_LOADER_ID, null, BookwormActivity.this);
 
                     // Create a new {@link BookAdapter} of books
                     mAdapter = new BookAdapter(getApplicationContext(), new ArrayList<Book>());
