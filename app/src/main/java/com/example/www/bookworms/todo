@@ -1,14 +1,16 @@
 TODO
 
-x JSON Zeug parsen // Achtung - hat bereits bei description und author gefuchst zwischendurch...
-x BookAdapter schreiben (2 Constructor, einmal mit und einmal ohne Bild
-x ListItem hübsch machen OHNE Image
-x HandlerManager einrichten
-x HTTP Connection erstellen und JSON aus Web fetchen
-x Checks für Internet, Leere Daten einbauen
-x Progress Bar einbauen beim Laden
-x Search Query ändern mit User Input
-x onItemClick für Link
-- Zum Spaß - Bild anzeigen einbauen
+x parse JSON with trial data // attention - description and author can be empty...
+x write BookAdapter schreiben
+x create niceish ListItem
+x create BookLoader LoaderManager
+x get JSON from Web (Static Link)
+x implement checks for no internet connection , empty data return
+x implement progressBar while loading
+x implement search bar with EditText and Button
+x imlement onItemClickListener for ListItem -> WebIntent to previewLink
+x for fun and exercise - create aSyncTask for loading pictures from within the ListAdapter :)
+
+- Bitmaps not cached... but enough for this project.
 
 Bug:
