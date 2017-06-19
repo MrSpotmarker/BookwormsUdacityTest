@@ -1,6 +1,5 @@
 package com.example.www.bookworms;
 
-import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -19,11 +18,11 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Utils {
+final class Utils {
 
     private static final String LOG_TAG = Utils.class.getSimpleName();
 
-    public static List<Book> extractFeaturesFromUrl(String queryUrl) {
+    static List<Book> extractFeaturesFromUrl(String queryUrl) {
 
         // Create URL object
         URL url = createUrl(queryUrl);
@@ -33,12 +32,12 @@ public final class Utils {
         try {
             jsonResponse = makeHttpRequest(url);
         } catch (IOException e) {
-            Log.e(LOG_TAG,   "Error closing input stream", e);
+            Log.e(LOG_TAG, "Error closing input stream", e);
         }
 
         // If the JSON string is empty or null, then return early.
         if (TextUtils.isEmpty(jsonResponse)) {
-            Log.e (LOG_TAG, "jsonResponse is empty after makeHttpRequest");
+            Log.e(LOG_TAG, "jsonResponse is empty after makeHttpRequest");
             return null;
         }
 
@@ -56,24 +55,25 @@ public final class Utils {
                 JSONObject volumeInfo = currentBook.optJSONObject("volumeInfo");
                 String title = volumeInfo.getString("title");
                 if (volumeInfo.has("authors")) {
-                JSONArray authorsArray = volumeInfo.getJSONArray("authors");
-                for (int i2 = 0; i2 < authorsArray.length(); i2++) {
-                    String author = authorsArray.getString(i2);
-                    authors.add(author);
-                }} else {
-                    authors.add("No authors are provided");
+                    JSONArray authorsArray = volumeInfo.getJSONArray("authors");
+                    for (int i2 = 0; i2 < authorsArray.length(); i2++) {
+                        String author = authorsArray.getString(i2);
+                        authors.add(author);
+                    }
+                } else {
+                    authors.add(BookwormActivity.GetStrings.getNoAuthor());
                 }
                 String description;
 
                 if (volumeInfo.has("description")) {
                     description = volumeInfo.getString("description");
-                } else { description = "No description provided"; }
+                } else {
+                    description = BookwormActivity.GetStrings.getNoDescription();
+                }
                 JSONObject imageLinksObject = volumeInfo.getJSONObject("imageLinks");
                 String imageLinks = imageLinksObject.getString("thumbnail");
                 String previewBook = volumeInfo.getString("previewLink");
-                URL previewBookUrl = createUrl(previewBook);
-                URL imageLinksUrl = createUrl(imageLinks);
-                books.add(new Book(title, authors, description, previewBookUrl, imageLinksUrl));
+                books.add(new Book(title, authors, description, previewBook, imageLinks));
             }
 
         } catch (JSONException e) {

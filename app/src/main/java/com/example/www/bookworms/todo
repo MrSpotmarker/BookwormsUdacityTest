@@ -8,9 +8,7 @@ x HTTP Connection erstellen und JSON aus Web fetchen
 x Checks für Internet, Leere Daten einbauen
 x Progress Bar einbauen beim Laden
 x Search Query ändern mit User Input
-- onItemClick für Link
+x onItemClick für Link
 - Zum Spaß - Bild anzeigen einbauen
 
-Debug:
-"no books" scheint auf bei progressBar
-JSON parst bei fehlender Description hard-coded text, nicht String-Resource...
+Bug:

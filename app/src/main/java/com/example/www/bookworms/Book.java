@@ -1,9 +1,6 @@
 package com.example.www.bookworms;
 
-import java.net.URL;
 import java.util.List;
-
-import static android.R.attr.author;
 
 /**
  * Created by Test on 15.06.2017.
@@ -14,10 +11,10 @@ public class Book {
     private String mTitle;
     private List<String> mAuthors;
     private String mDescription;
-    private URL mPreviewBook;
-    private URL mImgThumbUrl;
+    private String mPreviewBook;
+    private String mImgThumbUrl;
 
-    public Book (String title, List<String> authors, String description, URL previewBook, URL imgThumbUrl) {
+    public Book(String title, List<String> authors, String description, String previewBook, String imgThumbUrl) {
         mTitle = title;
         mAuthors = authors;
         mDescription = description;
@@ -42,11 +39,11 @@ public class Book {
         return mDescription;
     }
 
-    public URL getPreviewBook() {
+    public String getPreviewBook() {
         return mPreviewBook;
     }
 
-    public URL getImgaeThumbnailUrl() {
+    public String getImgaeThumbnailUrl() {
         return mImgThumbUrl;
     }
 
