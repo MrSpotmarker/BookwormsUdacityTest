@@ -3,7 +3,8 @@
     <string name="search">Search</string>
     <string name="description">Description:</string>
     <string name="no_internet">You are not connected to the internet.</string>
-    <string name="no_books">No books found.</string>
+    <string name="no_books">No books found. Please enter another topic.</string>
     <string name="no_description">No description for this book is provided by Google Books.</string>
     <string name="no_authors">No author information for this book is provided by Google Books.</string>
+    <string name="input_needed">Please enter a topic and press "search"</string>
 </resources>
