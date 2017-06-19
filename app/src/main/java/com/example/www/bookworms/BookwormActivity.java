@@ -140,12 +140,12 @@ public class BookwormActivity extends AppCompatActivity implements LoaderManager
         mAdapter.clear();
     }
 
-    public static class GetStrings {
-        public static String getNoAuthor() {
+    static class GetStrings {
+        static String getNoAuthor() {
             return NO_AUTHOR;
         }
 
-        public static String getNoDescription() {
+        static String getNoDescription() {
             return NO_DESCRIPTION;
         }
     }

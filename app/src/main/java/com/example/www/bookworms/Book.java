@@ -3,10 +3,10 @@ package com.example.www.bookworms;
 import java.util.List;
 
 /**
- * Created by Test on 15.06.2017.
+ * Package private class for "Book" objects
  */
 
-public class Book {
+class Book {
 
     private String mTitle;
     private List<String> mAuthors;
@@ -14,7 +14,7 @@ public class Book {
     private String mPreviewBook;
     private String mImgThumbUrl;
 
-    public Book(String title, List<String> authors, String description, String previewBook, String imgThumbUrl) {
+    Book(String title, List<String> authors, String description, String previewBook, String imgThumbUrl) {
         mTitle = title;
         mAuthors = authors;
         mDescription = description;
@@ -22,11 +22,11 @@ public class Book {
         mImgThumbUrl = imgThumbUrl;
     }
 
-    public String getTitle() {
+    String getTitle() {
         return mTitle;
     }
 
-    public String getAuthors() {
+    String getAuthors() {
         String authorsAsString = "";
         for (int i = 0; i < mAuthors.size(); i++) {
             authorsAsString = authorsAsString + mAuthors.get(i) + ", ";
@@ -35,15 +35,15 @@ public class Book {
         return authorsAsString;
     }
 
-    public String getDescription() {
+    String getDescription() {
         return mDescription;
     }
 
-    public String getPreviewBook() {
+    String getPreviewBook() {
         return mPreviewBook;
     }
 
-    public String getImgaeThumbnailUrl() {
+    String getImageThumbnailUrl() {
         return mImgThumbUrl;
     }
 
